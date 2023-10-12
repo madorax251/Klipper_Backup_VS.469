@@ -10,7 +10,7 @@ temperature_store_size = 600
 gcode_store_size = 1000
 
 [authorization]
-force_logins = false
+force_logins = True
 cors_domains = 
 	*.local
 	*.lan
@@ -25,16 +25,16 @@ trusted_clients =
 	FE80::/10
 	::1/128
 
-[history]
-
 [octoprint_compat]
 
-[update_manager]
-enable_auto_refresh = True
+[history]
 
 [announcements]
 subscriptions = 
 	fluidd
+
+[update_manager]
+enable_auto_refresh = True
 
 [update_manager fluidd]
 type = web
