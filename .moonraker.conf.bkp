@@ -10,10 +10,11 @@ temperature_store_size = 600
 gcode_store_size = 1000
 
 [authorization]
-force_logins = True
+force_logins = false
 cors_domains = 
 	*.local
 	*.lan
+	*://localhost
 	*://app.fluidd.xyz
 trusted_clients = 
 	10.0.0.0/8
@@ -24,16 +25,16 @@ trusted_clients =
 	FE80::/10
 	::1/128
 
+[history]
+
 [octoprint_compat]
 
-[history]
+[update_manager]
+enable_auto_refresh = True
 
 [announcements]
 subscriptions = 
 	fluidd
-
-[update_manager]
-enable_auto_refresh = True
 
 [update_manager fluidd]
 type = web
