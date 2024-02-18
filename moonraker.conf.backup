@@ -1,23 +1,22 @@
 [server]
 host: 0.0.0.0
 port: 7125
-max_upload_size: 1024
 
 [file_manager]
 # cancel object preprocessing - set to True to enable; leave disabled when running on a low-powered device (e.g. Pi Zero)
 enable_object_processing: True
 
-
 [data_store]
-temperature_store_size: 600 #1200
-gcode_store_size:  1000
-
+temperature_store_size: 600
+gcode_store_size: 1000
 
 [authorization]
 force_logins: True
+
 cors_domains:
   *.local
   *.lan
+  *://localhost
   *://app.fluidd.xyz
 
 trusted_clients:
@@ -45,7 +44,7 @@ subscriptions:
 enable_auto_refresh: True
 
 # this enabled fluidd updates
-[update_manager client fluidd]
+[update_manager fluidd]
 type: web
 repo: fluidd-core/fluidd
 path: ~/fluidd
@@ -64,13 +63,14 @@ off_when_shutdown: True
 restart_klipper_when_powered: true
 initial_state: on
 
-#[power printer]
-#type: gpio
-#pin: gpio22
-#off_when_shutdown: True
-#restart_klipper_when_powered:True
-#restart_delay: 1.
-#initial_state: off
+# [power printer]
+# type: gpio
+# pin: gpio22
+# off_when_shutdown: True
+# restart_klipper_when_powered:True
+# restart_delay: 1.
+# initial_state: off
+
 
 
 
